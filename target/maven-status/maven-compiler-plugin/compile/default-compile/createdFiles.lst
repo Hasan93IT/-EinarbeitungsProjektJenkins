@@ -1,0 +1,16 @@
+HelfMethoden\FormatedDate.class
+HelfMethoden\LoadData.class
+Pages\MainPage.class
+Pages\VerifyPreisPage.class
+HelfMethoden\ExceptionInput.class
+HelfMethoden\OpenFile.class
+HelfMethoden\GUI.class
+HelfMethoden\Input.class
+HelfMethoden\RandomGenerator.class
+Pages\CheckoutPage.class
+HelfMethoden\TestNGListener.class
+Pages\ArtikelKaufenPage.class
+HelfMethoden\ExceptionExistence.class
+Pages\RegisterPage.class
+Pages\LoginPage.class
+HelfMethoden\ElementTest.class

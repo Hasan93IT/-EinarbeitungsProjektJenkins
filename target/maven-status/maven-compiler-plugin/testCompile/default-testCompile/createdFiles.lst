@@ -1,0 +1,7 @@
+Testcase\GUITest.class
+Testcase\RegisterTest.class
+Testcase\TestPlan.class
+Testcase\LoginTest.class
+Testcase\CheckoutTest.class
+Testcase\ArtikelKaufenTest.class
+Testcase\TestBase.class

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="Gesamte TestPlan">
+        <classes>
+            <class name="Testcase.TestPlan">
+                <methods>
+                    <include name="RegisterTest"/>
+                    <include name="LoginTest"/>
+                    <include name="AddBook1ToCartTest"/>
+                    <include name="AddBook2ToCartTest"/>
+                    <include name="ShoppingCardClickTest"/>
+                    <include name="PreisBook1"/>
+                    <include name="PreisBook2"/>
+                    <include name="UpdateCartTest"/>
+                    <include name="EstimateShippingTest"/>
+                    <include name="BillingAddressTest"/>
+                    <include name="ShippingAddressTest"/>
+                    <include name="ShippingMethodTest"/>
+                    <include name="PaymentMethodTest"/>
+                    <include name="PaymentInformationTest"/>
+                    <include name="ConfirmOrderTest"/>
+                    <include name="successOrderTest"/>
+                    <include name="OrderEndTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

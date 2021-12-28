@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EinarbeitungsProjektJenkins"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7,076">
+    <properties></properties>
+
+
+
+            <testcase
+                name="LoginTest1"
+                time="7,076"
+                classname="Testcase.LoginTest">
+            </testcase>
+</testsuite>
