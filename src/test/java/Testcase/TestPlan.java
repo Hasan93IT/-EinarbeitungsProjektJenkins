@@ -72,7 +72,7 @@ public class TestPlan extends TestBase {
     }
 
     @Test(priority = 9,groups = "Checkout")
-    public void EstimateShippingTest() throws InterruptedException, ExceptionInput, ExceptionExistence {
+    public void EstimateShippingTest() throws InterruptedException, ExceptionInput, ExceptionExistence, IOException {
         Checkout = new CheckoutPage(driver);
         Checkout.EstimateShippingPage(driver);
     }

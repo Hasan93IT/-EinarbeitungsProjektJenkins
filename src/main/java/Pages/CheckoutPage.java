@@ -9,6 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.io.IOException;
+import java.util.Properties;
+
 import static HelfMethoden.ElementTest.ElementTestClick;
 import static HelfMethoden.ElementTest.StringIsEmpty;
 
@@ -59,17 +63,22 @@ public class CheckoutPage extends MainPage {
     @FindBy(xpath = " /html/body/div[4]/div[1]/div[4]/div/div/div[2]/div/div[2]/input")
     WebElement OrderEnd;
 
-    public void EstimateShippingPage(WebDriver driver) throws InterruptedException, ExceptionInput, ExceptionExistence {
+    public void EstimateShippingPage(WebDriver driver) throws InterruptedException, ExceptionInput, ExceptionExistence, IOException {
+
+        //für jenkins
+        Properties prop = new Properties();//für jenkins sehe auch pom.xml
+        prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
+        // LoadData
+        String Country = prop.getProperty("Country");//für jenkins sehe auch pom.xml
+        String StateProvince = prop.getProperty("StateProvince");//für jenkins sehe auch pom.xml*/
+        String ZipPostalCode = prop.getProperty("ZipPostalCode");//für jenkins sehe auch pom.xml*/
+
 
         Thread.sleep(500);
         Select CountryMenu = new Select(driver.findElement(By.id("CountryId")));
         StringIsEmpty(Country,"Country");
         CountryMenu.selectByVisibleText(Country);
-        /*  if (Country.isEmpty()) {
-            throw new ExceptionInput("Country");
-        } else {
-            CountryMenu.selectByVisibleText(Country);
-        }*/
+
         Select StateProvince1 = new Select(driver.findElement(By.id("StateProvinceId")));
         Thread.sleep(500);
         StringIsEmpty(StateProvince,"StateProvince");
@@ -125,7 +134,7 @@ public class CheckoutPage extends MainPage {
     public void successOrderPage() throws InterruptedException {
 
         Thread.sleep(2500);
-        successOrderText.isDisplayed();
+        //successOrderText.isDisplayed();
         Assert.assertEquals(successOrderText.getText(),
                 "Your order has been successfully processed!");
 
