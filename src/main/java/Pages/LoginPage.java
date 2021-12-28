@@ -23,8 +23,8 @@ public class LoginPage extends MainPage {
         super(driver);
     }
     //ohne jenkins
-     String Email = LoadData.userData.getProperty("Email");
-    String Password = LoadData.userData.getProperty("Password");
+   //  String Email = LoadData.userData.getProperty("Email");
+    //String Password = LoadData.userData.getProperty("Password");
 
     //Login button in menulist
     @FindBy(className = "ico-login")
@@ -49,12 +49,11 @@ public class LoginPage extends MainPage {
     public void login() throws ExceptionInput, InterruptedException, ExceptionExistence, IOException {
 
         //für jenkins
-     /*  Properties prop = new Properties();//für jenkins sehe auch pom.xml
+       Properties prop = new Properties();//für jenkins sehe auch pom.xml
        prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
        // LoadData
        String Email = prop.getProperty("Email");//für jenkins sehe auch pom.xml
        String Password = prop.getProperty("Password");//für jenkins sehe auch pom.xml*/
-
 
 
         ElementTestClick(login,"login");

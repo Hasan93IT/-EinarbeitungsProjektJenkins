@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
-                    <span>C:\Users\Hasan Abdullah\IdeaProjects\EinarbeitungsProjekt\XMLFile\Logintest.xml</span>
+                    <span>C:\Users\Hasan Abdullah\IdeaProjects\EinarbeitungsProjektJenkins\XMLFile\RegisterTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-All_Test_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="Testcase.LoginTest" class="method navigator-link" hash-for-method="LoginTest1">LoginTest1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-All_Test_Suite" title="Testcase.RegisterTest" class="method navigator-link" hash-for-method="RegisterTest1">RegisterTest1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-All_Test_Suite -->
@@ -122,23 +122,23 @@
           <div class="suite-All_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Testcase.LoginTest</span>
+              <span class="class-name">Testcase.RegisterTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginTest1">
-                  </a> <!-- LoginTest1 -->
-                  <span class="method-name">LoginTest1</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.ico\-logout&quot;}
+                  <a name="RegisterTest1">
+                  </a> <!-- RegisterTest1 -->
+                  <span class="method-name">RegisterTest1</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result&quot;}
   (Session info: chrome=96.0.4664.110)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
 System info: host: &apos;LAPTOP-OVVQL70O&apos;, ip: &apos;192.168.178.44&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [35c37fcc464ba64fd449de2aabe72531, findElement {using=css selector, value=.ico\-logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\WINDOWS\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:51005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51005/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 35c37fcc464ba64fd449de2aabe72531
+Command: [4b3b406bd763c69824a78fc6abce18e9, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\WINDOWS\TEMP\scoped_dir6...}, goog:chromeOptions: {debuggerAddress: localhost:51486}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51486/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b3b406bd763c69824a78fc6abce18e9
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -163,8 +163,8 @@ Session ID: 35c37fcc464ba64fd449de2aabe72531
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
-	at Pages.LoginPage.login(LoginPage.java:77)
-	at Testcase.LoginTest.LoginTest1(LoginTest.java:22)
+	at Pages.RegisterPage.Register(RegisterPage.java:118)
+	at Testcase.RegisterTest.RegisterTest1(RegisterTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -206,22 +206,22 @@ Session ID: 35c37fcc464ba64fd449de2aabe72531
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Hasan Abdullah\IdeaProjects\EinarbeitungsProjekt\XMLFile\Logintest.xml</span>
+            <span class="header-content">C:\Users\Hasan Abdullah\IdeaProjects\EinarbeitungsProjektJenkins\XMLFile\RegisterTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login Test&quot; verbose=&quot;2&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Register Test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Testcase.LoginTest&quot;&gt;
+      &lt;class name=&quot;Testcase.RegisterTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;LoginTest1&quot;/&gt;
+          &lt;include name=&quot;RegisterTest1&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Testcase.LoginTest --&gt;
+      &lt;/class&gt; &lt;!-- Testcase.RegisterTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login Test --&gt;
+  &lt;/test&gt; &lt;!-- Register Test --&gt;
 &lt;/suite&gt; &lt;!-- All Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,7 +233,7 @@ Session ID: 35c37fcc464ba64fd449de2aabe72531
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login Test (1 class)</span>
+                <span class="test-name">Register Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -261,14 +261,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginTest1')
-data.setCell(0, 2, 'Testcase.LoginTest')
-data.setCell(0, 3, 1138);
+data.setCell(0, 1, 'RegisterTest1')
+data.setCell(0, 2, 'Testcase.RegisterTest')
+data.setCell(0, 3, 852);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 852 ms</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -294,7 +294,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Testcase.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Testcase.RegisterTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">StartDriver(chrome)</span>
                 <span class="method-start">0 ms</span>
@@ -302,16 +302,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">LoginTest1</span>
-                <span class="method-start">6570 ms</span>
+                <span class="method-name">RegisterTest1</span>
+                <span class="method-start">4021 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">TearDown([TestResult name=LoginTest1 status=FAILURE method=LoginTest.LoginTest1()[pri:0, instance:Testcase.Lo...)</span>
-                <span class="method-start">7718 ms</span>
+                <span class="method-name">TearDown([TestResult name=RegisterTest1 status=FAILURE method=RegisterTest.RegisterTest1()[pri:0, instance:Te...)</span>
+                <span class="method-start">4880 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">QuitDriver</span>
-                <span class="method-start">38009 ms</span>
+                <span class="method-start">35102 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

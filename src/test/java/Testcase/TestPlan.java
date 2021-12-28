@@ -24,7 +24,7 @@ public class TestPlan extends TestBase {
 
 
     @Test(priority = 1,groups = "Register")
-    public void RegisterTest() throws ExceptionInput, ExceptionExistence {
+    public void RegisterTest() throws ExceptionInput, ExceptionExistence, IOException {
         Register = new RegisterPage(driver);
         Register.Register();
     }
@@ -55,7 +55,7 @@ public class TestPlan extends TestBase {
       //  Thread.sleep(500);
     }
     @Test(priority = 6,groups = "Artikelkaufen")
-    public void PreisBook1() throws InterruptedException, ExceptionInput {
+    public void PreisBook1() throws InterruptedException, ExceptionInput, IOException {
         Thread.sleep(200);
         Preise.VerifyTolalPreisBook1();
     }
@@ -67,7 +67,7 @@ public class TestPlan extends TestBase {
 
     }
     @Test(priority = 8,groups = "Artikelkaufen")
-    public void UpdateCartTest() throws InterruptedException, ExceptionExistence, ExceptionInput {
+    public void UpdateCartTest() throws InterruptedException, ExceptionExistence, ExceptionInput, IOException {
         Books.UpdateCartPage();
     }
 

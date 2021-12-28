@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import static HelfMethoden.ElementTest.ElementTestClick;
 import static HelfMethoden.ElementTest.StringIsEmpty;
 
@@ -50,13 +53,24 @@ public class VerifyPreisPage extends MainPage {
     }
 
     //überprufung des Preises des ersten Buchs
-    public void VerifyTolalPreisBook1() throws ExceptionInput {
-        StringIsEmpty(LoadData.userData.getProperty("PriceBook1"),"PriceBook1");
+    public void VerifyTolalPreisBook1() throws ExceptionInput, IOException {
+
+
+        //für jenkins
+       Properties prop = new Properties();//für jenkins sehe auch pom.xml
+        prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
+        // LoadData
+        String PriceBook1 = prop.getProperty("PriceBook1");//für jenkins sehe auch pom.xml
+
+
+        StringIsEmpty(PriceBook1,"PriceBook1");
+
+
         // hier sind die Werte in array gespeichert
         Price[0][0]=Float.parseFloat(OneBook1Price.getText());
         Price[0][1]=Float.parseFloat(QtyBook1Price.getAttribute("value"));
         Price[0][2]=Float.parseFloat(TotalBook1Price.getText());
-        Price[0][3]=Float.parseFloat(LoadData.userData.getProperty("PriceBook1"));
+        Price[0][3]=Float.parseFloat(PriceBook1);
 
         TotalBook1Price.isDisplayed();
         QtyBook1Price.isDisplayed();

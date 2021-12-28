@@ -9,6 +9,8 @@ import Pages.VerifyPreisPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 
 //testen des Kaufs von 2 Büchern
 @Listeners(TestNGListener.class)
@@ -47,7 +49,7 @@ public class ArtikelKaufenTest extends TestBase {
     }
 
     @Test(priority = 4)
-    public void PreisBook1() throws InterruptedException, ExceptionInput {
+    public void PreisBook1() throws InterruptedException, ExceptionInput, IOException {
         Thread.sleep(200);
         Preise.VerifyTolalPreisBook1();
     }
@@ -60,7 +62,7 @@ public class ArtikelKaufenTest extends TestBase {
     }
 
     @Test(priority = 6)
-    public void UpdateCartTest() throws InterruptedException, ExceptionExistence, ExceptionInput {
+    public void UpdateCartTest() throws InterruptedException, ExceptionExistence, ExceptionInput, IOException {
         Thread.sleep(2000);
         Books.UpdateCartPage();
     }

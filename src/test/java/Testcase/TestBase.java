@@ -107,7 +107,6 @@ public class TestBase {
             options.addArguments("--window-size=1920,1080");
             driver =new  ChromeDriver(options);
 
-
           //  String Path = System.getProperty("user.dir") + "\\drivers\\phantomjs.exe";
           //  DesiredCapabilities des = new DesiredCapabilities();
           //  des.setJavascriptEnabled(true);
@@ -116,8 +115,6 @@ public class TestBase {
           //  des.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, phantomJsArgument);
           //  driver = new PhantomJSDriver(des);
         }
-
-     //  driver.navigate().to(System.getProperty("name"));//für jenkins sehe auch pom.xml
      /*  Properties prop = new Properties();//für jenkins sehe auch pom.xml
        prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
       String WebAppPath = prop.getProperty("WebAppPath");//für jenkins sehe auch pom.xml*/
@@ -140,7 +137,12 @@ public class TestBase {
                 //result.getName() will return name of test case so that screenshot name will be same
                 Datum = new FormatedDate();
                 FileHandler.copy(source, new File("./Screenshots/" + result.getName() + "_" + Datum.getFormatedDate() + ".png"));
-                System.out.println("Screenshot taken");
+                System.out.println("\n"+"Screenshot aufgenommen");
+                System.out.println("*****************************************************************************" +
+                        "****************************************************************");
+                System.out.println("Screenshot Speicherort==> " +System.getProperty("user.dir") + "/Screenshots/" + result.getName() + "_" + Datum.getFormatedDate() + ".png");
+                System.out.println("*********************************************************" +
+                        "************************************************************************************"+"\n"+"\n");
                 Screenshot.OpenScreenshot();
             } catch (Exception e) {
                 System.out.println("Exception while taking screenshot " + e.getMessage());

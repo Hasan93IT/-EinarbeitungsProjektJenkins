@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-28T15:12:53 MEZ" name="All Test Suite" finished-at="2021-12-28T15:13:24 MEZ" duration-ms="31439">
+  <suite started-at="2021-12-28T19:20:10 MEZ" name="All Test Suite" finished-at="2021-12-28T19:20:41 MEZ" duration-ms="31072">
     <groups>
     </groups>
-    <test started-at="2021-12-28T15:12:53 MEZ" name="Login Test" finished-at="2021-12-28T15:13:24 MEZ" duration-ms="31439">
-      <class name="Testcase.LoginTest">
-        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:Testcase.LoginTest@7526515b]" started-at="2021-12-28T15:12:46 MEZ" name="StartDriver" finished-at="2021-12-28T15:12:53 MEZ" duration-ms="6538" status="PASS">
+    <test started-at="2021-12-28T19:20:10 MEZ" name="Register Test" finished-at="2021-12-28T19:20:41 MEZ" duration-ms="31072">
+      <class name="Testcase.RegisterTest">
+        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:Testcase.RegisterTest@7526515b]" started-at="2021-12-28T19:20:06 MEZ" name="StartDriver" finished-at="2021-12-28T19:20:10 MEZ" duration-ms="4002" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,29 +18,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="LoginTest1()[pri:0, instance:Testcase.LoginTest@7526515b]" started-at="2021-12-28T15:12:53 MEZ" name="LoginTest1" finished-at="2021-12-28T15:12:54 MEZ" duration-ms="1138" status="FAIL">
+        <test-method signature="RegisterTest1()[pri:0, instance:Testcase.RegisterTest@7526515b]" started-at="2021-12-28T19:20:10 MEZ" name="RegisterTest1" finished-at="2021-12-28T19:20:11 MEZ" duration-ms="852" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".ico\-logout"}
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".result"}
   (Session info: chrome=96.0.4664.110)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'LAPTOP-OVVQL70O', ip: '192.168.178.44', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [35c37fcc464ba64fd449de2aabe72531, findElement {using=css selector, value=.ico\-logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\WINDOWS\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:51005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51005/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 35c37fcc464ba64fd449de2aabe72531]]>
+Command: [4b3b406bd763c69824a78fc6abce18e9, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\WINDOWS\TEMP\scoped_dir6...}, goog:chromeOptions: {debuggerAddress: localhost:51486}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51486/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b3b406bd763c69824a78fc6abce18e9]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".ico\-logout"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
   (Session info: chrome=96.0.4664.110)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'LAPTOP-OVVQL70O', ip: '192.168.178.44', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [35c37fcc464ba64fd449de2aabe72531, findElement {using=css selector, value=.ico\-logout}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\WINDOWS\TEMP\scoped_dir5...}, goog:chromeOptions: {debuggerAddress: localhost:51005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51005/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 35c37fcc464ba64fd449de2aabe72531
+Command: [4b3b406bd763c69824a78fc6abce18e9, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\WINDOWS\TEMP\scoped_dir6...}, goog:chromeOptions: {debuggerAddress: localhost:51486}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51486/devtoo..., se:cdpVersion: 96.0.4664.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b3b406bd763c69824a78fc6abce18e9
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -65,8 +65,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
-at Pages.LoginPage.login(LoginPage.java:77)
-at Testcase.LoginTest.LoginTest1(LoginTest.java:22)
+at Pages.RegisterPage.Register(RegisterPage.java:118)
+at Testcase.RegisterTest.RegisterTest1(RegisterTest.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -104,23 +104,23 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest1 -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.LoginTest@7526515b]" started-at="2021-12-28T15:12:54 MEZ" name="TearDown" finished-at="2021-12-28T15:13:24 MEZ" duration-ms="30257" status="PASS">
+        </test-method> <!-- RegisterTest1 -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.RegisterTest@7526515b]" started-at="2021-12-28T19:20:11 MEZ" name="TearDown" finished-at="2021-12-28T19:20:41 MEZ" duration-ms="30192" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LoginTest1 status=FAILURE method=LoginTest.LoginTest1()[pri:0, instance:Testcase.LoginTest@7526515b] output={null}]]]>
+                <![CDATA[[TestResult name=RegisterTest1 status=FAILURE method=RegisterTest.RegisterTest1()[pri:0, instance:Testcase.RegisterTest@7526515b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="QuitDriver()[pri:0, instance:Testcase.LoginTest@7526515b]" started-at="2021-12-28T15:13:24 MEZ" name="QuitDriver" finished-at="2021-12-28T15:13:26 MEZ" duration-ms="1645" status="PASS">
+        <test-method is-config="true" signature="QuitDriver()[pri:0, instance:Testcase.RegisterTest@7526515b]" started-at="2021-12-28T19:20:41 MEZ" name="QuitDriver" finished-at="2021-12-28T19:20:43 MEZ" duration-ms="1625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
-      </class> <!-- Testcase.LoginTest -->
-    </test> <!-- Login Test -->
+      </class> <!-- Testcase.RegisterTest -->
+    </test> <!-- Register Test -->
   </suite> <!-- All Test Suite -->
 </testng-results>

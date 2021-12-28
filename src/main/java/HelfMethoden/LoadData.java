@@ -27,23 +27,4 @@ public class LoadData {
         }
         return pro ;
     }
-
-
-/*
-    private static void WriteProperties(String path,String Value)  {
-        //TODO
-        Properties pro = new Properties();
-        FileOutputStream stream;
-        //String s="Hasan";
-         try {
-            stream = new FileOutputStream(path);
-            pro.setProperty(path,Value);
-           //  pro.
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }*/
 }

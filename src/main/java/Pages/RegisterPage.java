@@ -8,6 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import static HelfMethoden.ElementTest.ElementTestClick;
 
 //klasse für Register Testen
@@ -15,11 +18,12 @@ import static HelfMethoden.ElementTest.ElementTestClick;
 public class RegisterPage extends MainPage {
 
     public static String PasswordRegister = RandomGenerator.RandomNumber(6);
-    String Firstname1 = LoadData.userData.getProperty("Firstname");
-    String Lastname1 = LoadData.userData.getProperty("Lastname");
-    String Email1 = LoadData.userData.getProperty("Email");
-    String Password1 = LoadData.userData.getProperty("Password");
-    String Gender = LoadData.userData.getProperty("Gender");
+
+    //String Firstname1 = LoadData.userData.getProperty("Firstname");
+    //String Lastname1 = LoadData.userData.getProperty("Lastname");
+   // String Email1 = LoadData.userData.getProperty("Email");
+   // String Password1 = LoadData.userData.getProperty("Password");
+    //String Gender = LoadData.userData.getProperty("Gender");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -58,7 +62,17 @@ public class RegisterPage extends MainPage {
     @FindBy(className = "ico-logout")
     WebElement logout;
 
-    public void Register() throws ExceptionInput, ExceptionExistence {
+    public void Register() throws ExceptionInput, ExceptionExistence, IOException {
+        //für jenkins
+        Properties prop = new Properties();//für jenkins sehe auch pom.xml
+        prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
+        // LoadData
+        String Gender = prop.getProperty("Gender");//für jenkins sehe auch pom.xml
+        String Firstname1 = prop.getProperty("Firstname");//für jenkins sehe auch pom.xml
+        String Lastname1 = prop.getProperty("Lastname");//für jenkins sehe auch pom.xml
+        String Email1 = prop.getProperty("Email");//für jenkins sehe auch pom.xml
+        String Password1 = prop.getProperty("Password");//für jenkins sehe auch pom.xml
+        //--------------------------------jenkins------------------------------------
 
         ElementTestClick(RegisterMenu, "RegisterMenu");
 

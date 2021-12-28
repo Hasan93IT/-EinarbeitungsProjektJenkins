@@ -9,6 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.io.IOException;
+import java.util.Properties;
+
 import static HelfMethoden.ElementTest.ElementTestClick;
 import static HelfMethoden.ElementTest.StringIsEmpty;
 
@@ -67,8 +70,15 @@ public class ArtikelKaufenPage extends MainPage {
     }
 
     //book1 zweimal bestellen mit update des Warenkorbs
-    public void UpdateCartPage() throws InterruptedException, ExceptionExistence, ExceptionInput {
+    public void UpdateCartPage() throws InterruptedException, ExceptionExistence, ExceptionInput, IOException {
         Thread.sleep(200);
+
+        //für jenkins
+        Properties prop = new Properties();//für jenkins sehe auch pom.xml
+        prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
+        // LoadData
+        String QuantityBook1 = prop.getProperty("QuantityBook1");//für jenkins sehe auch pom.xml
+
         StringIsEmpty(QuantityBook1, "QuantityBook1");
         //System.out.println("moin");
         Book1Doppelt.clear();

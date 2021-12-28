@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="Artikel Kaufen Test">
         <classes>
-            <class name="Testcase.CheckoutTest">
+            <class name="Testcase.ArtikelKaufenTest">
                 <methods>
                     <include name="AddBook1ToCartTest"/>
                     <include name="AddBook2ToCartTest"/>
