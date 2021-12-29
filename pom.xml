@@ -4,10 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>EinarbeitungsProjekt</groupId>
-    <artifactId>EinarbeitungsProjekt</artifactId>
+    <groupId>EinarbeitungsProjektJenkins</groupId>
+    <artifactId>EinarbeitungsProjektJenkins</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <developers>
+        <developer>
+            <id>Hasan</id>
+            <name>Hasan Abdullah</name>
+            <email>habdullah@nelta.de</email>
+        </developer>
+    </developers>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -16,8 +22,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -39,7 +43,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-edge-driver</artifactId>
-            <version>2.47.1</version>
+            <version>4.1.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
         <dependency>
@@ -54,25 +58,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>reportng</artifactId>
             <version>1.2.2</version>
             <scope>test</scope>
         </dependency>
-
-
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>5.6.1</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -97,6 +92,11 @@
         </dependency>
 
         <!--
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.5.0</version>
+        </dependency>
  <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -153,24 +153,6 @@
         </dependency>
         -->
     </dependencies>
-
-    <!--
-      <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.9.1</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M5</version>
-
-                </plugin>
-            </plugins>
-        </build>
-    -->
 
 
     <build>

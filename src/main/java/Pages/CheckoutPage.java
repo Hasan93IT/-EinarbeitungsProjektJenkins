@@ -2,7 +2,6 @@ package Pages;
 
 import HelfMethoden.ExceptionExistence;
 import HelfMethoden.ExceptionInput;
-import HelfMethoden.LoadData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,9 +18,9 @@ import static HelfMethoden.ElementTest.StringIsEmpty;
 
 public class CheckoutPage extends MainPage {
 
-    private final String Country = LoadData.userData.getProperty("Country");
-    private final String StateProvince = LoadData.userData.getProperty("StateProvince");
-    private final String ZipPostalCode = LoadData.userData.getProperty("ZipPostalCode");
+  //  private final String Country = LoadData.userData.getProperty("Country");
+  //  private final String StateProvince = LoadData.userData.getProperty("StateProvince");
+  //  private final String ZipPostalCode = LoadData.userData.getProperty("ZipPostalCode");
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
@@ -126,9 +125,6 @@ public class CheckoutPage extends MainPage {
     public void ConfirmOrderPage() throws InterruptedException, ExceptionExistence {
         Thread.sleep(500);
         ElementTestClick(ConfirmOrderButton,"ConfirmOrderButton");
-       // ConfirmOrderButton.isDisplayed();
-       // ConfirmOrderButton.isEnabled();
-       // ConfirmOrderButton.click();
     }
 
     public void successOrderPage() throws InterruptedException {
@@ -137,7 +133,6 @@ public class CheckoutPage extends MainPage {
         //successOrderText.isDisplayed();
         Assert.assertEquals(successOrderText.getText(),
                 "Your order has been successfully processed!");
-
     }
 
     public void OrderEndPage() throws InterruptedException, ExceptionExistence {

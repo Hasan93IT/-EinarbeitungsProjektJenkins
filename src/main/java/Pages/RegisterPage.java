@@ -2,16 +2,14 @@ package Pages;
 
 import HelfMethoden.ExceptionExistence;
 import HelfMethoden.ExceptionInput;
-import HelfMethoden.LoadData;
 import HelfMethoden.RandomGenerator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.io.IOException;
 import java.util.Properties;
-
 import static HelfMethoden.ElementTest.ElementTestClick;
+
 
 //klasse für Register Testen
 //falls keine Werte in TestData existieren, dann werden zufällige Werten eingegeben

@@ -2,15 +2,11 @@ package Pages;
 
 import HelfMethoden.ExceptionExistence;
 import HelfMethoden.ExceptionInput;
-
-import HelfMethoden.LoadData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.io.IOException;
 import java.util.Properties;
-
 import static HelfMethoden.ElementTest.ElementTestClick;
 import static HelfMethoden.ElementTest.StringIsEmpty;
 
@@ -43,8 +39,8 @@ public class LoginPage extends MainPage {
     @FindBy(className = "ico-logout")
     WebElement loginisDisplayed;
 
-    @FindBy(xpath = " /html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[2]/span/span")
-    WebElement loginEmailError;
+    //@FindBy(xpath = " /html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[2]/span/span")
+    //WebElement loginEmailError;
 
     public void login() throws ExceptionInput, InterruptedException, ExceptionExistence, IOException {
 

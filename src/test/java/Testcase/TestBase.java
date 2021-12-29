@@ -2,8 +2,6 @@ package Testcase;
 
 import HelfMethoden.FormatedDate;
 import HelfMethoden.LoadData;
-import HelfMethoden.OpenFile;
-import HelfMethoden.TestNGListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,21 +12,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.testng.IResultMap;
-import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-import static HelfMethoden.Input.InputString1;
 
 
 public class TestBase {
@@ -104,12 +92,15 @@ public class TestBase {
                 //Copy method  specific location here it will save all screenshot in our project home directory and
                 //result.getName() will return name of test case so that screenshot name will be same
                 Datum = new FormatedDate();
-                FileHandler.copy(source, new File("./Screenshots/" + result.getName() + "_" + Datum.getFormatedDate() + ".png"));
+                FileHandler.copy(source, new File("./Screenshots/" +
+                        result.getName() + "_" + Datum.getFormatedDate() + ".png"));
 
                 System.out.println("*****************************************************************************" +
                         "****************************************************************");
                 System.out.println("Screenshot aufgenommen");
-                System.out.println("Screenshot Speicherort==> " +System.getProperty("user.dir") + "/Screenshots/" +
+                System.out.println("Screenshot name: "+
+                        result.getName() + "_" + Datum.getFormatedDate() + ".png");
+                System.out.println("Screenshot Speicherort ==> " +System.getProperty("user.dir") + "/Screenshots/" +
                         result.getName() + "_" + Datum.getFormatedDate() + ".png");
                 System.out.println("*********************************************************" +
                         "************************************************************************************"+"\n"+"\n");

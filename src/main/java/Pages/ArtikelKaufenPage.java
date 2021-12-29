@@ -21,7 +21,7 @@ public class ArtikelKaufenPage extends MainPage {
         super(driver);
     }
 
-    private final String QuantityBook1 = LoadData.userData.getProperty("QuantityBook1");
+    //private final String QuantityBook1 = LoadData.userData.getProperty("QuantityBook1");
 
     @FindBy(xpath = "/html/body/div[4]/div[1]/div[2]/ul[1]/li[1]/a")
     WebElement openBooksMenu;

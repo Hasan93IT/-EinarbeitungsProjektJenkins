@@ -52,10 +52,8 @@ public class TestNGListener implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         ITestListener.super.onFinish(context);
-        System.out.println("\n"+"====================<Finish Test "+ context.getName()+">==================="+"\n");
-        //System.out.println("\n"+"on Finish: " + context.getName());
-       // result.getStatus();
-
+        System.out.println("\n"+"====================<Finish Test "+ context.getName()+">===================");
+        System.out.println("~~~Autor: Hasan Abdullah~~~"+"\n");
     }
 
 }
