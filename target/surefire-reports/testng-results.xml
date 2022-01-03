@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-02T23:31:51 MEZ" name="All Test Suite" finished-at="2022-01-02T23:31:58 MEZ" duration-ms="7186">
+  <suite started-at="2022-01-03T01:22:36 MEZ" name="All Test Suite" finished-at="2022-01-03T01:23:05 MEZ" duration-ms="28972">
     <groups>
+      <group name="Checkout">
+        <method signature="TestPlan.BillingAddressTest()[pri:10, instance:Testcase.TestPlan@20140db9]" name="BillingAddressTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.ConfirmOrderTest()[pri:15, instance:Testcase.TestPlan@20140db9]" name="ConfirmOrderTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.EstimateShippingTest()[pri:9, instance:Testcase.TestPlan@20140db9]" name="EstimateShippingTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.OrderEndTest()[pri:17, instance:Testcase.TestPlan@20140db9]" name="OrderEndTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.PaymentInformationTest()[pri:14, instance:Testcase.TestPlan@20140db9]" name="PaymentInformationTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.PaymentMethodTest()[pri:13, instance:Testcase.TestPlan@20140db9]" name="PaymentMethodTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.ShippingAddressTest()[pri:11, instance:Testcase.TestPlan@20140db9]" name="ShippingAddressTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.ShippingMethodTest()[pri:12, instance:Testcase.TestPlan@20140db9]" name="ShippingMethodTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.successOrderTest()[pri:16, instance:Testcase.TestPlan@20140db9]" name="successOrderTest" class="Testcase.TestPlan"/>
+      </group> <!-- Checkout -->
+      <group name="Register">
+        <method signature="TestPlan.RegisterTest()[pri:1, instance:Testcase.TestPlan@20140db9]" name="RegisterTest" class="Testcase.TestPlan"/>
+      </group> <!-- Register -->
+      <group name="Artikelkaufen">
+        <method signature="TestPlan.AddBook1ToCartTest()[pri:3, instance:Testcase.TestPlan@20140db9]" name="AddBook1ToCartTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.AddBook2ToCartTest()[pri:4, instance:Testcase.TestPlan@20140db9]" name="AddBook2ToCartTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.PreisBook1()[pri:6, instance:Testcase.TestPlan@20140db9]" name="PreisBook1" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.PreisBook2()[pri:7, instance:Testcase.TestPlan@20140db9]" name="PreisBook2" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.ShoppingCardClickTest()[pri:5, instance:Testcase.TestPlan@20140db9]" name="ShoppingCardClickTest" class="Testcase.TestPlan"/>
+        <method signature="TestPlan.UpdateCartTest()[pri:8, instance:Testcase.TestPlan@20140db9]" name="UpdateCartTest" class="Testcase.TestPlan"/>
+      </group> <!-- Artikelkaufen -->
+      <group name="Login">
+        <method signature="TestPlan.LoginTest()[pri:2, instance:Testcase.TestPlan@20140db9]" name="LoginTest" class="Testcase.TestPlan"/>
+      </group> <!-- Login -->
     </groups>
-    <test started-at="2022-01-02T23:31:51 MEZ" name="Login Test" finished-at="2022-01-02T23:31:58 MEZ" duration-ms="7186">
-      <class name="Testcase.LoginTest">
-        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:Testcase.LoginTest@4d5650ae]" started-at="2022-01-02T23:31:43 MEZ" name="StartDriver" finished-at="2022-01-02T23:31:51 MEZ" duration-ms="7544" status="PASS">
+    <test started-at="2022-01-03T01:22:36 MEZ" name="Gesamte TestPlan" finished-at="2022-01-03T01:23:05 MEZ" duration-ms="28972">
+      <class name="Testcase.TestPlan">
+        <test-method is-config="true" signature="StartDriver(java.lang.String)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:29 MEZ" name="StartDriver" finished-at="2022-01-03T01:22:36 MEZ" duration-ms="6879" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,26 +43,266 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="LoginTest1()[pri:0, instance:Testcase.LoginTest@4d5650ae]" started-at="2022-01-02T23:31:51 MEZ" name="LoginTest1" finished-at="2022-01-02T23:31:58 MEZ" duration-ms="7154" status="PASS">
+        <test-method signature="RegisterTest()[pri:1, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:36 MEZ" name="RegisterTest" finished-at="2022-01-03T01:22:46 MEZ" duration-ms="10080" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest1 -->
-        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.LoginTest@4d5650ae]" started-at="2022-01-02T23:31:58 MEZ" name="TearDown" finished-at="2022-01-02T23:31:58 MEZ" duration-ms="0" status="PASS">
+        </test-method> <!-- RegisterTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:46 MEZ" name="TearDown" finished-at="2022-01-03T01:22:46 MEZ" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LoginTest1 status=SUCCESS method=LoginTest.LoginTest1()[pri:0, instance:Testcase.LoginTest@4d5650ae] output={null}]]]>
+                <![CDATA[[TestResult name=RegisterTest status=SUCCESS method=TestPlan.RegisterTest()[pri:1, instance:Testcase.TestPlan@20140db9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="QuitDriver()[pri:0, instance:Testcase.LoginTest@4d5650ae]" started-at="2022-01-02T23:31:58 MEZ" name="QuitDriver" finished-at="2022-01-02T23:31:59 MEZ" duration-ms="1622" status="PASS">
+        <test-method signature="LoginTest()[pri:2, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:46 MEZ" name="LoginTest" finished-at="2022-01-03T01:22:48 MEZ" duration-ms="1901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:48 MEZ" name="TearDown" finished-at="2022-01-03T01:22:48 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=LoginTest status=SUCCESS method=TestPlan.LoginTest()[pri:2, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="AddBook1ToCartTest()[pri:3, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:48 MEZ" name="AddBook1ToCartTest" finished-at="2022-01-03T01:22:50 MEZ" duration-ms="2070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBook1ToCartTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:50 MEZ" name="TearDown" finished-at="2022-01-03T01:22:50 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddBook1ToCartTest status=SUCCESS method=TestPlan.AddBook1ToCartTest()[pri:3, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="AddBook2ToCartTest()[pri:4, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:50 MEZ" name="AddBook2ToCartTest" finished-at="2022-01-03T01:22:52 MEZ" duration-ms="1617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBook2ToCartTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:52 MEZ" name="TearDown" finished-at="2022-01-03T01:22:52 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddBook2ToCartTest status=SUCCESS method=TestPlan.AddBook2ToCartTest()[pri:4, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="ShoppingCardClickTest()[pri:5, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:52 MEZ" name="ShoppingCardClickTest" finished-at="2022-01-03T01:22:52 MEZ" duration-ms="489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShoppingCardClickTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:52 MEZ" name="TearDown" finished-at="2022-01-03T01:22:52 MEZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ShoppingCardClickTest status=SUCCESS method=TestPlan.ShoppingCardClickTest()[pri:5, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="PreisBook1()[pri:6, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:52 MEZ" name="PreisBook1" finished-at="2022-01-03T01:22:52 MEZ" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreisBook1 -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:52 MEZ" name="TearDown" finished-at="2022-01-03T01:22:52 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PreisBook1 status=SUCCESS method=TestPlan.PreisBook1()[pri:6, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="PreisBook2()[pri:7, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:52 MEZ" name="PreisBook2" finished-at="2022-01-03T01:22:53 MEZ" duration-ms="330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PreisBook2 -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:53 MEZ" name="TearDown" finished-at="2022-01-03T01:22:53 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PreisBook2 status=SUCCESS method=TestPlan.PreisBook2()[pri:7, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="UpdateCartTest()[pri:8, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:53 MEZ" name="UpdateCartTest" finished-at="2022-01-03T01:22:54 MEZ" duration-ms="1064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateCartTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:54 MEZ" name="TearDown" finished-at="2022-01-03T01:22:54 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UpdateCartTest status=SUCCESS method=TestPlan.UpdateCartTest()[pri:8, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="EstimateShippingTest()[pri:9, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:54 MEZ" name="EstimateShippingTest" finished-at="2022-01-03T01:22:57 MEZ" duration-ms="2969" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EstimateShippingTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:57 MEZ" name="TearDown" finished-at="2022-01-03T01:22:57 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EstimateShippingTest status=SUCCESS method=TestPlan.EstimateShippingTest()[pri:9, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="BillingAddressTest()[pri:10, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:57 MEZ" name="BillingAddressTest" finished-at="2022-01-03T01:22:57 MEZ" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BillingAddressTest -->
+        <test-method signature="ShippingAddressTest()[pri:11, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:57 MEZ" name="ShippingAddressTest" finished-at="2022-01-03T01:22:58 MEZ" duration-ms="1107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingAddressTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:57 MEZ" name="TearDown" finished-at="2022-01-03T01:22:57 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=BillingAddressTest status=SUCCESS method=TestPlan.BillingAddressTest()[pri:10, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:58 MEZ" name="TearDown" finished-at="2022-01-03T01:22:58 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ShippingAddressTest status=SUCCESS method=TestPlan.ShippingAddressTest()[pri:11, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="ShippingMethodTest()[pri:12, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:22:58 MEZ" name="ShippingMethodTest" finished-at="2022-01-03T01:23:00 MEZ" duration-ms="1101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShippingMethodTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:00 MEZ" name="TearDown" finished-at="2022-01-03T01:23:00 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ShippingMethodTest status=SUCCESS method=TestPlan.ShippingMethodTest()[pri:12, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="PaymentMethodTest()[pri:13, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:00 MEZ" name="PaymentMethodTest" finished-at="2022-01-03T01:23:00 MEZ" duration-ms="592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaymentMethodTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:00 MEZ" name="TearDown" finished-at="2022-01-03T01:23:00 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PaymentMethodTest status=SUCCESS method=TestPlan.PaymentMethodTest()[pri:13, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="PaymentInformationTest()[pri:14, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:00 MEZ" name="PaymentInformationTest" finished-at="2022-01-03T01:23:01 MEZ" duration-ms="645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PaymentInformationTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:01 MEZ" name="TearDown" finished-at="2022-01-03T01:23:01 MEZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=PaymentInformationTest status=SUCCESS method=TestPlan.PaymentInformationTest()[pri:14, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="ConfirmOrderTest()[pri:15, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:01 MEZ" name="ConfirmOrderTest" finished-at="2022-01-03T01:23:01 MEZ" duration-ms="604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ConfirmOrderTest -->
+        <test-method signature="successOrderTest()[pri:16, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:01 MEZ" name="successOrderTest" finished-at="2022-01-03T01:23:04 MEZ" duration-ms="2533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successOrderTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:01 MEZ" name="TearDown" finished-at="2022-01-03T01:23:01 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ConfirmOrderTest status=SUCCESS method=TestPlan.ConfirmOrderTest()[pri:15, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:04 MEZ" name="TearDown" finished-at="2022-01-03T01:23:04 MEZ" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=successOrderTest status=SUCCESS method=TestPlan.successOrderTest()[pri:16, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method signature="OrderEndTest()[pri:17, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:04 MEZ" name="OrderEndTest" finished-at="2022-01-03T01:23:05 MEZ" duration-ms="879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderEndTest -->
+        <test-method is-config="true" signature="TearDown(org.testng.ITestResult)[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:05 MEZ" name="TearDown" finished-at="2022-01-03T01:23:05 MEZ" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OrderEndTest status=SUCCESS method=TestPlan.OrderEndTest()[pri:17, instance:Testcase.TestPlan@20140db9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="QuitDriver()[pri:0, instance:Testcase.TestPlan@20140db9]" started-at="2022-01-03T01:23:05 MEZ" name="QuitDriver" finished-at="2022-01-03T01:23:06 MEZ" duration-ms="1610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QuitDriver -->
-      </class> <!-- Testcase.LoginTest -->
-    </test> <!-- Login Test -->
+      </class> <!-- Testcase.TestPlan -->
+    </test> <!-- Gesamte TestPlan -->
   </suite> <!-- All Test Suite -->
 </testng-results>

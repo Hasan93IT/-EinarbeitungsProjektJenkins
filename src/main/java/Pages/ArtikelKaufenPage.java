@@ -51,7 +51,7 @@ public class ArtikelKaufenPage extends MainPage {
 
         ElementTestClick(AddBook1ToCart, "AddBook1ToCart");
 
-        Thread.sleep(1000);
+        Thread.sleep(1500);
 
         AddBookToCartisDisplayed.isDisplayed();
         Assert.assertEquals(AddBookToCartisDisplayed.getText(),
@@ -62,7 +62,7 @@ public class ArtikelKaufenPage extends MainPage {
     public void AddBooks2ToCartPage() throws InterruptedException {
         AddBookToCartisDisplayed.isDisplayed();
         AddBook2ToCart.click();
-        Thread.sleep(1000);
+        Thread.sleep(1500);
 
         AddBookToCartisDisplayed.isDisplayed();
         Assert.assertEquals(AddBookToCartisDisplayed.getText(),

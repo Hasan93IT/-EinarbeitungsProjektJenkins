@@ -100,12 +100,12 @@ public class CheckoutPage extends MainPage {
     }
 
     public void ShippingAddressPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         ElementTestClick(ShippingAddressButton,"ShippingAddressButton");
     }
 
     public void ShippingMethodPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         ElementTestClick(ShippingMethodButton,"ShippingMethodButton");
     }
 
