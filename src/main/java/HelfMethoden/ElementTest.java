@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 public class ElementTest {
     // überprüfung eines WebElement "button", falls Enabled oder Displayed dann wird geklickt
     //sonst werft ExceptionExistence.
-    public static void ElementTestClick(WebElement Element, String ElementName) throws ExceptionExistence {
-
+    public static void ElementTestClick(WebElement Element, String ElementName) throws ExceptionExistence, InterruptedException {
+Thread.sleep(1000);
         if (Element.isEnabled() && Element.isDisplayed()) {
             Element.click();
         } else {

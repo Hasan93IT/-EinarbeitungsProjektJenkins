@@ -47,7 +47,7 @@ public class VerifyPreisPage extends MainPage {
     @FindBy(linkText = "Shopping cart")
     WebElement ShoppingCard ;
 
-    public void ShoppingCardClickPage() throws ExceptionExistence {
+    public void ShoppingCardClickPage() throws ExceptionExistence, InterruptedException {
         ElementTestClick(ShoppingCard,"ShoppingCard");
     }
 

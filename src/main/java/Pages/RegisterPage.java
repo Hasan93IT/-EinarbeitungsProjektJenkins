@@ -60,7 +60,7 @@ public class RegisterPage extends MainPage {
     @FindBy(className = "ico-logout")
     WebElement logout;
 
-    public void Register() throws ExceptionInput, ExceptionExistence, IOException {
+    public void Register() throws ExceptionInput, ExceptionExistence, IOException, InterruptedException {
         //für jenkins
         Properties prop = new Properties();//für jenkins sehe auch pom.xml
         prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
