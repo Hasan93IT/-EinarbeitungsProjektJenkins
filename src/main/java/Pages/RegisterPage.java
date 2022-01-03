@@ -82,14 +82,14 @@ public class RegisterPage extends MainPage {
                 ElementTestClick(FemaleButton, "FemaleButton");
             }
         } else {//falls werte für Gender vorhanden sind
-            if (Gender.equals("M") || Gender.equals("m")) {
+            if (Gender.equals("Male")) {
                 ElementTestClick(MaleButton, "MaleButton");
 
-            } else if (Gender.equals("F") || Gender.equals("f")) {
+            } else if (Gender.equals("Female")) {
                 ElementTestClick(FemaleButton, "FemaleButton");
 
             } else {
-                throw new ExceptionInput("nur F Oder M");
+                throw new ExceptionInput("nur Female oder Male");
             }
         }//überprüfung, ob die Werte in TestData existieren
         if (Firstname1.isEmpty() || Lastname1.isEmpty() || Email1.isEmpty() || Password1.isEmpty()) {

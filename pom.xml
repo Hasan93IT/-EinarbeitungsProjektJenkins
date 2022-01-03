@@ -12,6 +12,8 @@
             <id>Hasan</id>
             <name>Hasan Abdullah</name>
             <email>habdullah@nelta.de</email>
+            <organization>Nelta</organization>
+            <organizationUrl>https://nelta.de/</organizationUrl>
         </developer>
     </developers>
     <properties>
@@ -22,6 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -84,14 +87,20 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.32</version>
         </dependency>
-        <dependency>
+
+
+        <!--
+         <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.19.4</version>
+        </dependency>
+         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.1</version>
             <type>maven-plugin</type>
         </dependency>
-
-        <!--
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
@@ -151,13 +160,31 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.1.0</version>
         </dependency>
+        System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "") html report
+
+        Groovy Script
+if(Test.equals("Logintest")){
+"<b>Für ${Test} sind die folgenden Eingaben fällig: <br>*Email <br>*Password</b>"
+}
+else if(Test.equals("RegisterTest")){
+"<b>Für ${Test} sind die folgenden Eingaben fällig:<br>*Gender<br>*Email<br>*Password<br>*FirstName<br>*LastName<br></b>"}
+
+else if(Test.equals("CheckoutTest")){
+"<b>Für ${Test} sind die folgenden Eingaben fällig:<br>*Email<br>*Password<br>*PriceBook1<br>*QuantityBook1<br>*Country<br>*StateProvince<br>*ZipPostalCode<br></b>"}
+
+else if(Test.equals("ArtikelKaufenTest")){
+"<b>Für ${Test} sind die folgenden Eingaben fällig:<br>*PriceBook1<br>*QuantityBook1<br></b>"}
+
+else if(Test.equals("GesamteTest")){
+"<b>Für ${Test} sind Alle Eingabe fällig</b>"}
+
         -->
     </dependencies>
 
 
     <build>
-        <plugins>
-            <plugin>
+      <plugins>
+             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -166,18 +193,20 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <!--<suiteXmlFile>GUI.xml</suiteXmlFile>-->
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                         <!--<suiteXmlFile>testng.xml</suiteXmlFile> für Github-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
+
         </plugins>
         <testResources>
             <testResource>
@@ -185,6 +214,22 @@
                 <filtering>true</filtering>
             </testResource>
         </testResources>
+        <!-- To define the plugin version in your parent POM -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.atlassian.maven.plugins</groupId>
+                    <artifactId>maven-jira-plugin</artifactId>
+                    <version>3.9.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <!-- To use the plugin goals in your POM or parent POM -->
+
+
+
+
+
     </build>
 
 </project>
