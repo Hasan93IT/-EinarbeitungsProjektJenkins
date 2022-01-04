@@ -79,7 +79,8 @@ public class TestPlan extends TestBase {
 
     @Test (priority = 10,groups = "Checkout")
     public void BillingAddressTest() throws InterruptedException, ExceptionExistence {
-        Checkout.BillingAddressPage();
+        Checkout = new CheckoutPage(driver);
+        Checkout.BillingAddressPage1(driver);
     }
 
     @Test (priority = 11,groups = "Checkout")

@@ -35,7 +35,31 @@ public class CheckoutPage extends MainPage {
     @FindBy(id = "checkout")
     WebElement CheckoutButton;
 
-    @FindBy(xpath = "//*[@id=\"billing-buttons-container\"]/input")
+
+
+
+
+    @FindBy(id = "BillingNewAddress_City")
+    WebElement BillingAddresscity;
+
+    @FindBy(id = "BillingNewAddress_Address1")
+    WebElement BillingAddressAddress;
+
+    @FindBy(id = "BillingNewAddress_ZipPostalCode")
+    WebElement BillingAddressZip;
+
+    @FindBy(id = "BillingNewAddress_PhoneNumber")
+    WebElement BillingAddressphon;
+
+   /* @FindBy(xpath = "//*[@id=\"billing-buttons-container\"]/input")
+    WebElement BillingAddressButton;*/
+
+
+
+
+
+
+    @FindBy(xpath = "//body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ol[1]/li[1]/div[2]/div[1]/input[1]")
     WebElement BillingAddressButton;
 
     @FindBy(xpath = "//*[@id=\"shipping-buttons-container\"]/input")
@@ -68,41 +92,68 @@ public class CheckoutPage extends MainPage {
         Properties prop = new Properties();//für jenkins sehe auch pom.xml
         prop.load(this.getClass().getResourceAsStream("/TestData.properties"));//für jenkins sehe auch pom.xml
         // LoadData
+
         String Country = prop.getProperty("Country");//für jenkins sehe auch pom.xml
         String StateProvince = prop.getProperty("StateProvince");//für jenkins sehe auch pom.xml*/
         String ZipPostalCode = prop.getProperty("ZipPostalCode");//für jenkins sehe auch pom.xml*/
+        Thread.sleep(2000);
 
 
-        Thread.sleep(500);
-        Select CountryMenu = new Select(driver.findElement(By.id("CountryId")));
+        Select CountryMenu = new Select(driver.findElement(By.xpath(
+                "/html[1]/body[1]/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/div[2]/div[1]/div[3]/div[1]/select[1]")));
         StringIsEmpty(Country,"Country");
+        Thread.sleep(1000);
         CountryMenu.selectByVisibleText(Country);
 
         Select StateProvince1 = new Select(driver.findElement(By.id("StateProvinceId")));
-        Thread.sleep(500);
+
         StringIsEmpty(StateProvince,"StateProvince");
+        Thread.sleep(2000);
         StateProvince1.selectByVisibleText(StateProvince);
 
-        // Thread.sleep(500);
+
         ZipPostalCode1.clear();
         StringIsEmpty(ZipPostalCode,"ZipPostalCode");
+        Thread.sleep(1000);
         ZipPostalCode1.sendKeys(ZipPostalCode);
 
         ElementTestClick(Agree,"Agree");
 
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         ElementTestClick(CheckoutButton,"CheckoutButton");
+       // System.out.println("hier fehler1");
+
+        Thread.sleep(2000);
     }
 
+    // mit neu register test
+    public void BillingAddressPage1(WebDriver driver) throws InterruptedException, ExceptionExistence {
+        Thread.sleep(1000);
+        Select BillingAddress = new Select(driver.findElement(By.id(
+                "BillingNewAddress_CountryId")));
+        Thread.sleep(1000);
+        BillingAddress.selectByVisibleText("Canada");
+        //   BillingAddress.selectByIndex(2);
+        BillingAddresscity.sendKeys("DemoCity");
+
+        BillingAddressAddress.sendKeys("demoadr");
+
+        BillingAddressZip.sendKeys("123456");
+        BillingAddressphon.sendKeys("123456789");
+        Thread.sleep(1000);
+        ElementTestClick(BillingAddressButton, "BillingAddressButton");
+    }
+
+    // ohne neu register test
     public void BillingAddressPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+        Thread.sleep(2000);
+
         ElementTestClick(BillingAddressButton,"BillingAddressButton");
     }
 
     public void ShippingAddressPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(1000);
-       // ElementTestClick(ShippingAddressButton,"ShippingAddressButton");
-        ShippingAddressButton.click();
+        Thread.sleep(2000);
+        ElementTestClick(ShippingAddressButton,"ShippingAddressButton");
     }
 
     public void ShippingMethodPage() throws InterruptedException, ExceptionExistence {
@@ -111,12 +162,12 @@ public class CheckoutPage extends MainPage {
     }
 
     public void PaymentMethodPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         ElementTestClick(PaymentMethodButton,"PaymentMethodButton");
     }
 
     public void PaymentInformationPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         PaymentInformation.isDisplayed();
         System.out.println(PaymentInformation.getText());
 
@@ -124,7 +175,7 @@ public class CheckoutPage extends MainPage {
     }
 
     public void ConfirmOrderPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         ElementTestClick(ConfirmOrderButton,"ConfirmOrderButton");
     }
 
@@ -134,10 +185,12 @@ public class CheckoutPage extends MainPage {
         //successOrderText.isDisplayed();
         Assert.assertEquals(successOrderText.getText(),
                 "Your order has been successfully processed!");
+        Thread.sleep(2500);
     }
 
     public void OrderEndPage() throws InterruptedException, ExceptionExistence {
-        Thread.sleep(500);
+
         ElementTestClick(OrderEnd,"OrderEnd");
+        Thread.sleep(2000);
     }
 }
