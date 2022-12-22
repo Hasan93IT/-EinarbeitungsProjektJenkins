@@ -1,0 +1,206 @@
+<maven2-moduleset plugin="maven-plugin@3.16">
+<actions/>
+<description/>
+<keepDependencies>false</keepDependencies>
+<properties>
+<jenkins.plugins.maveninfo.config.MavenInfoJobConfig plugin="maven-info@0.3.0">
+<mainModulePattern/>
+<dependenciesPattern/>
+<assignName>false</assignName>
+<nameTemplate/>
+<assignDescription>false</assignDescription>
+<descriptionTemplate/>
+</jenkins.plugins.maveninfo.config.MavenInfoJobConfig>
+<hudson.plugins.jira.JiraProjectProperty plugin="jira@3.6">
+<siteName>https://hasansjira.atlassian.net/</siteName>
+</hudson.plugins.jira.JiraProjectProperty>
+<org.jenkinsci.plugins.mavenrepocleaner.MavenRepoCleanerProperty plugin="maven-repo-cleaner@1.2">
+<notOnThisProject>false</notOnThisProject>
+</org.jenkinsci.plugins.mavenrepocleaner.MavenRepoCleanerProperty>
+<org.jenkinsci.plugins.customizebuildnow.BuildNowTextProperty plugin="customize-build-now@1.1">
+<alternateBuildNow>Run Test</alternateBuildNow>
+</org.jenkinsci.plugins.customizebuildnow.BuildNowTextProperty>
+<hudson.model.ParametersDefinitionProperty>
+<parameterDefinitions>
+<org.biouno.unochoice.ChoiceParameter plugin="uno-choice@2.5.7">
+<name>Test</name>
+<randomName>choice-parameter-95049193526800</randomName>
+<visibleItemCount>1</visibleItemCount>
+<script class="org.biouno.unochoice.model.GroovyScript">
+<secureScript plugin="script-security@1.78">
+<script>return['Logintest', 'RegisterTest', 'CheckoutTest', 'ArtikelKaufenTest', 'GesamteTest' ]</script>
+<sandbox>false</sandbox>
+</secureScript>
+<secureFallbackScript plugin="script-security@1.78">
+<script/>
+<sandbox>false</sandbox>
+</secureFallbackScript>
+</script>
+<projectName>EinarbeitungsProjektGithub</projectName>
+<projectFullName>EinarbeitungsProjektGithub</projectFullName>
+<choiceType>PT_SINGLE_SELECT</choiceType>
+<filterable>true</filterable>
+<filterLength>1</filterLength>
+</org.biouno.unochoice.ChoiceParameter>
+<org.biouno.unochoice.DynamicReferenceParameter plugin="uno-choice@2.5.7">
+<name>Hinweis</name>
+<randomName>choice-parameter-95049196671300</randomName>
+<visibleItemCount>1</visibleItemCount>
+<script class="org.biouno.unochoice.model.GroovyScript">
+<secureScript plugin="script-security@1.78">
+<script>if(Test.equals("Logintest")){ "<b>Für ${Test} sind die folgenden Eingaben fällig: <br>*Email <br>*Password</b>" } else if(Test.equals("RegisterTest")){ "<b>Für ${Test} sind die folgenden Eingaben fällig:<br>*Gender<br>*Email<br>*Password<br>*FirstName<br>*LastName<br></b>"} else if(Test.equals("CheckoutTest")){ "<b>Für ${Test} sind Alle Eingabe fällig</b>"} else if(Test.equals("ArtikelKaufenTest")){ "<b>Für ${Test} sind die folgenden Eingaben fällig:<br>*PriceBook1<br>*QuantityBook1<br></b>"} else if(Test.equals("GesamteTest")){ "<b>Für ${Test} sind Alle Eingabe fällig</b>"}</script>
+<sandbox>false</sandbox>
+</secureScript>
+<secureFallbackScript plugin="script-security@1.78">
+<script/>
+<sandbox>false</sandbox>
+</secureFallbackScript>
+</script>
+<projectName>EinarbeitungsProjektGithub</projectName>
+<projectFullName>EinarbeitungsProjektGithub</projectFullName>
+<parameters class="linked-hash-map"/>
+<referencedParameters>Test</referencedParameters>
+<choiceType>ET_FORMATTED_HTML</choiceType>
+<omitValueField>false</omitValueField>
+</org.biouno.unochoice.DynamicReferenceParameter>
+<hudson.model.StringParameterDefinition>
+<name>Email</name>
+<description>*Für LoginTest und GesamteTest und CheckoutTest</description>
+<defaultValue>demo.mann@test.de</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.PasswordParameterDefinition>
+<name>Password</name>
+<description>*Für LoginTest und GesamteTest und CheckoutTest</description>
+<defaultValue>{AQAAABAAAAAQE6KPa0i5y8rbFgLN65m9ZqN1MNPJHGGpRTNRRC2cb0E=}</defaultValue>
+</hudson.model.PasswordParameterDefinition>
+<org.biouno.unochoice.ChoiceParameter plugin="uno-choice@2.5.7">
+<name>Gender</name>
+<randomName>choice-parameter-95049204604400</randomName>
+<visibleItemCount>1</visibleItemCount>
+<script class="org.biouno.unochoice.model.GroovyScript">
+<secureScript plugin="script-security@1.78">
+<script>return['Female', 'Male' ]</script>
+<sandbox>false</sandbox>
+</secureScript>
+<secureFallbackScript plugin="script-security@1.78">
+<script/>
+<sandbox>false</sandbox>
+</secureFallbackScript>
+</script>
+<projectName>EinarbeitungsProjektGithub</projectName>
+<projectFullName>EinarbeitungsProjektGithub</projectFullName>
+<choiceType>PT_RADIO</choiceType>
+<filterable>false</filterable>
+<filterLength>1</filterLength>
+</org.biouno.unochoice.ChoiceParameter>
+<hudson.model.StringParameterDefinition>
+<name>Firstname</name>
+<description>*Für RegisterTest</description>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.StringParameterDefinition>
+<name>Lastname</name>
+<description>*Für RegisterTest</description>
+<defaultValue>Mann</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.StringParameterDefinition>
+<name>PriceBook1</name>
+<description>*Für ArtikelKaufenTest und GesamteTest und CheckoutTest</description>
+<defaultValue>10</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.StringParameterDefinition>
+<name>QuantityBook1</name>
+<description>*Für ArtikelKaufenTest und GesamteTest und CheckoutTest</description>
+<defaultValue>3</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.StringParameterDefinition>
+<name>Country</name>
+<description>*Für GesamteTest und CheckoutTest</description>
+<defaultValue>Canada</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.StringParameterDefinition>
+<name>StateProvince</name>
+<description>*Für GesamteTest und CheckoutTest</description>
+<defaultValue>Alberta</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+<hudson.model.StringParameterDefinition>
+<name>ZipPostalCode</name>
+<description>*Für GesamteTest und CheckoutTest</description>
+<defaultValue>6665</defaultValue>
+<trim>false</trim>
+</hudson.model.StringParameterDefinition>
+</parameterDefinitions>
+</hudson.model.ParametersDefinitionProperty>
+</properties>
+<scm class="hudson.plugins.git.GitSCM" plugin="git@4.10.1">
+<configVersion>2</configVersion>
+<userRemoteConfigs>
+<hudson.plugins.git.UserRemoteConfig>
+<url>https://github.com/habdullahNelta/EinarbeitungsProjektJenkins.git</url>
+</hudson.plugins.git.UserRemoteConfig>
+</userRemoteConfigs>
+<branches>
+<hudson.plugins.git.BranchSpec>
+<name>*/main</name>
+</hudson.plugins.git.BranchSpec>
+</branches>
+<doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+<submoduleCfg class="empty-list"/>
+<extensions/>
+</scm>
+<canRoam>true</canRoam>
+<disabled>false</disabled>
+<blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+<blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+<triggers/>
+<concurrentBuild>false</concurrentBuild>
+<rootModule>
+<groupId>EinarbeitungsProjektJenkins</groupId>
+<artifactId>EinarbeitungsProjektJenkins</artifactId>
+</rootModule>
+<goals>clean install -DsuiteXmlFile=XMLFile\$Test.xml -DEmailVar=$Email -DPasswordVar=$Password -DQuantityBook1Var=$QuantityBook1 -DPriceBook1Var=$PriceBook1 -DGenderVar=$Gender -DFirstnameVar=$Firstname -DLastnameVar=$Lastname -DCountryVar=$Country -DStateProvinceVar=$StateProvince -DZipPostalCodeVar=$ZipPostalCode</goals>
+<aggregatorStyleBuild>true</aggregatorStyleBuild>
+<incrementalBuild>false</incrementalBuild>
+<ignoreUpstremChanges>false</ignoreUpstremChanges>
+<ignoreUnsuccessfulUpstreams>false</ignoreUnsuccessfulUpstreams>
+<archivingDisabled>false</archivingDisabled>
+<siteArchivingDisabled>false</siteArchivingDisabled>
+<fingerprintingDisabled>false</fingerprintingDisabled>
+<resolveDependencies>false</resolveDependencies>
+<processPlugins>false</processPlugins>
+<mavenValidationLevel>-1</mavenValidationLevel>
+<runHeadless>false</runHeadless>
+<disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+<blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+<settings class="jenkins.mvn.DefaultSettingsProvider"/>
+<globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+<reporters/>
+<publishers/>
+<buildWrappers>
+<com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+<varPasswordPairs>
+<varPasswordPair var="Password" password="{AQAAABAAAAAQ7rxprj/tASLXIDooW7JyFcLlxxXhw7UsIFQBAeF/ZDQ=}"/>
+</varPasswordPairs>
+</com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+<org.jenkinsci.plugins.buildnamesetter.BuildNameSetter plugin="build-name-setter@2.2.0">
+<template>${Test}</template>
+<descriptionTemplate/>
+<runAtStart>true</runAtStart>
+<runAtEnd>true</runAtEnd>
+</org.jenkinsci.plugins.buildnamesetter.BuildNameSetter>
+</buildWrappers>
+<prebuilders/>
+<postbuilders/>
+<runPostStepsIfResult>
+<name>FAILURE</name>
+<ordinal>2</ordinal>
+<color>RED</color>
+<completeBuild>true</completeBuild>
+</runPostStepsIfResult>
+</maven2-moduleset>
